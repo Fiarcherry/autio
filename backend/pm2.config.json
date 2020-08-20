@@ -1,0 +1,11 @@
+{
+  "apps" : [{
+    "name": "autio-backend",
+    "script": "./app.js",
+    "ignore_watch" : ["node_modules"],
+    "exec_mode": "cluster_mode",
+    "env_production" : {
+      "NODE_ENV": "production"
+    }
+  }]
+}

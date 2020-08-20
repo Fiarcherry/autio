@@ -1,0 +1,27 @@
+<h1>Список пользователей</h1>
+<p><a href="/users/create">Добавить пользователя</a></p>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Mail</th>
+        <th>Login</th>
+        <th>Password</th>
+        <th>LastfmKey</th>
+        <th></th>
+    </tr>
+    {{#each users}}
+    <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.mail}}</td>
+        <td>{{this.login}}</td>
+        <td>{{this.password}}</td>
+        <td>{{this.lastfm_key}}</td>
+        <td>
+            <a href="/users/edit/{{this.id}}">Редактировать</a>|
+            <form action="/users/delete/{{this.id}}" method="POST" style="display:inline;">
+                <input type="submit" value="Удалить" />
+            </form>
+        </td>
+    </tr>
+    {{/each}}
+</table>

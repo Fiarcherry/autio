@@ -1,0 +1,12 @@
+<h1>Редактирование пользователя</h1>
+<form action="/users/edit" method="POST">
+  <input type="hidden" name="id" value="{{user.id}}" />
+  <label>Почта</label><br>
+  <input type="email" name="mail" value="{{user.mail}}" class="field" maxlength="50" /><br><br>
+  <label>Логин</label><br>
+  <input type="text" name="login" value="{{user.login}}" class="field" maxlength="30" /><br><br>
+  <label>Пароль</label><br>
+  <input type="password" name="password" value="{{user.password}}" class="field" maxlength="30" /><br><br>
+  <input type="text" name="lastfmKey" value="{{user.lastfmKey}}"/>
+  <input type="submit" value="Отправить" />
+</form>
